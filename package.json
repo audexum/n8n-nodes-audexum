@@ -1,0 +1,46 @@
+{
+  "name": "n8n-nodes-audexum",
+  "version": "0.1.1",
+  "description": "n8n community node for Audexum TTS API. Convert text to speech with 43 voices and 33 languages.",
+  "keywords": [
+    "n8n-community-node-package",
+    "tts",
+    "text-to-speech",
+    "audio",
+    "voice",
+    "ai"
+  ],
+  "license": "MIT",
+  "homepage": "https://audexum.com",
+  "author": {
+    "name": "Petar",
+    "email": "hello@audexum.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audexum/n8n-nodes-audexum.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cp nodes/AudexumTts/audexum.svg dist/nodes/AudexumTts/",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AudexumApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AudexumTts/AudexumTts.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "n8n-workflow": "^1.28.0",
+    "typescript": "^5.1.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
