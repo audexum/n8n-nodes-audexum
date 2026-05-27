@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-audexum",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node for Audexum TTS API. Convert text to speech with 43 voices and 33 languages.",
   "keywords": [
     "n8n-community-node-package",
